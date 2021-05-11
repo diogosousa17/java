@@ -9,5 +9,8 @@ public class Main {
         //DemoArray.nSimo();
         //DemoArray.bubbleSort();
         //DemoArray.binarySearch();
+        //DemoArray.removerElemento();
+        DemoArray.espacoLivre();
+        //DemoArray.aumentarArray();
     }
 }

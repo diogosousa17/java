@@ -7,10 +7,10 @@ public class DemoArray {
 
     public static void criarArray() {
         array[0] = 10;
-        array[1] = 32;
-        array[2] = 89;
-        array[3] = 42;
-        array[4] = 17;
+        array[1] = 11;
+        array[2] = 12;
+        array[3] = 0;
+        array[4] = 0;
     }
 
     public static void limparArray() {
@@ -52,7 +52,7 @@ public class DemoArray {
             }
         }
         if(encontrou == false) {
-            System.out.println("Não existe esse número nessa posição! ");
+            System.out.println("Não existe esse número nessa posição!");
         }
     }
 
@@ -106,6 +106,58 @@ public class DemoArray {
         }
         if(numero != mid) {
             System.out.println("O número não foi encontrado!");
+        }
+    }
+
+    public static void removerElemento() {
+        int numero;
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Introduza o número a remover: ");
+        numero = scanner.nextInt();
+
+        for(int i = 0; i < array.length; i++) {
+            if(numero == array[i]) {
+                array[i] = 0;
+                System.out.println("O número " + numero + " foi removido!");
+            }
+        }
+    }
+
+    public static void elementoRepetido() {
+        int x = 0;
+        boolean encontrou = false;
+        for(int i = 0; i < 5; i++) {
+            for(int j = i+1; j < 5; j++) {
+                if(array[j] == array[i]) {
+                    encontrou = true;
+                }
+            }
+        }if(encontrou == true) {
+            System.out.println("Existem números repetidos na array!");
+        }
+        if(encontrou == false) {
+            System.out.println("Não existem números repetidos!");
+        }
+    }
+
+    public static void espacoLivre() {
+
+        for(int i = 0; i < array.length; i++) {
+            if(array[i] == 0) {
+                System.out.println("A posição " + (i+1) + " está livre!");
+            }
+        }
+    }
+
+    public static void aumentarArray() {
+        int[] array2 = new int[array.length*2];
+
+        for(int i = 0; i < array.length; i++) {
+            array2[i] = array[i];
+        }
+        array = array2;
+        for(int i = 0; i < array2.length; i++) {
+            System.out.println(array2[i]);
         }
     }
 }
