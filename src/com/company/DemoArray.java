@@ -52,7 +52,7 @@ public class DemoArray {
             }
         }
         if(encontrou == false) {
-            System.out.println("Não existe esse número nessa posição!");
+            System.out.println("Não existe esse número nessa posição! ");
         }
     }
 
